@@ -1,78 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 body {
-    background-color: rgba(30, 109, 159, 0.178);
+    font-family: 'Varela Round', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Varela Round', sans-serif;
+    background-color: rgba(30, 109, 159, 0.178);
+    overflow-x: hidden;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-/* Navbar */
 nav {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #000; 
+    background-color: black;
     color: white;
-    position: fixed; 
-    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
     width: 100%;
-    z-index: 1000; 
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    top: 0;
+    z-index: 999;
 }
 
-nav ul {
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    list-style-type: none;
-    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-nav ul li {
-    padding: 0 12px;
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1DB954;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
 }
 
-.brand img {
-    width: 44px;
-    padding-right: 8px;
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 5px;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-nav ul li:hover {
-    color: #1DB954; 
-
-
-/* Cover Section */
 .cover {
     height: 60vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 20px;
     color: white;
     position: relative;
-}
-
-.cover-content {
-    z-index: 1;
 }
 
 .cover h1 {
@@ -100,7 +106,6 @@ nav ul li:hover {
     background-color: #14833B;
 }
 
-/* Featured Album Section */
 .featured-album {
     padding: 40px 10%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -160,7 +165,6 @@ nav ul li:hover {
     background-color: #14833B;
 }
 
-/* Song List */
 .container {
     min-height: 72vh;
     background-color: rgba(0, 0, 0, 0.8);
@@ -170,8 +174,6 @@ nav ul li:hover {
     width: 80%;
     border-radius: 12px;
     padding: 20px;
-    background-size: cover;
-    background-position: center;
     flex-direction: column;
 }
 
@@ -217,7 +219,6 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-/* Bottom Player */
 .bottom {
     position: sticky;
     bottom: 0;
@@ -252,7 +253,6 @@ nav ul li:hover {
     margin-right: 10px;
 }
 
-/* Media Queries */
 @media (max-width: 1100px) {
     .container {
         width: 90%;
@@ -272,8 +272,12 @@ nav ul li:hover {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .cover h1 {
@@ -291,5 +295,4 @@ nav ul li:hover {
     .album {
         width: 90%;
     }
-}
 }
