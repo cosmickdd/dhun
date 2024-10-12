@@ -224,7 +224,7 @@ nav {
     margin-left: 20px;
 }
 
-/* Bottom Player */
+
 .bottom-player {
     position: fixed;
     bottom: 0;
@@ -247,19 +247,19 @@ nav {
 }
 
 .bottom-player #gif {
-    width: 40px;  /* Resize gif */
-    height: 40px; /* Ensure consistent size */
+    width: 40px;  
+    height: 40px; 
     margin-right: 10px;
 }
 
 .bottom-player #song-title {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #00A1FF;  /* Brand blue for song title */
+    color: #00A1FF;  
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 250px; /* Limit the title width to avoid overflow */
+    max-width: 250px; 
 }
 
 .bottom-player #progress-bar {
@@ -282,10 +282,9 @@ nav {
 }
 
 .bottom-player .controls i:hover {
-    color: #1DB954; /* Green on hover */
+    color: #1DB954; 
 }
 
-/* For mobile responsiveness */
 @media (max-width: 768px) {
     .bottom-player {
         padding: 10px;
@@ -293,7 +292,7 @@ nav {
 
     .bottom-player #song-title {
         font-size: 1rem;
-        max-width: 150px; /* Adjust title width for smaller screens */
+        max-width: 150px; /
     }
 
     .bottom-player .controls i {
