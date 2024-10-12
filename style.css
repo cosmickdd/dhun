@@ -2,8 +2,9 @@ body {
     font-family: 'Varela Round', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(30, 109, 159, 0.178);
+    background-color: black; /* Body background black */
     overflow-x: hidden;
+    color: white; /* Text color white */
 }
 
 * {
@@ -73,9 +74,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-size: cover;
-    background-position: center;
+    background-color: black;
     text-align: center;
     color: white;
     position: relative;
@@ -84,6 +83,7 @@ nav {
 .cover h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #00A1FF; /* Brand blue color for headings */
 }
 
 .cover p {
@@ -92,7 +92,7 @@ nav {
 }
 
 .cover button {
-    background-color: #1DB954;
+    background-color: #1DB954; /* Button color green */
     color: white;
     padding: 12px 24px;
     font-size: 1.1rem;
@@ -103,12 +103,12 @@ nav {
 }
 
 .cover button:hover {
-    background-color: #14833B;
+    background-color: #14833B; /* Darker green on hover */
 }
 
 .featured-album {
     padding: 40px 10%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: black;
     color: white;
 }
 
@@ -116,6 +116,7 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    color: #00A1FF; /* Brand blue */
 }
 
 .album-container {
@@ -144,11 +145,13 @@ nav {
 .album h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    color: white;
 }
 
 .album p {
     font-size: 1rem;
     margin-bottom: 15px;
+    color: #ccc; /* Slightly lighter for descriptions */
 }
 
 .album button {
@@ -167,7 +170,7 @@ nav {
 
 .container {
     min-height: 72vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: black;
     color: white;
     display: flex;
     margin: 23px auto;
@@ -188,12 +191,14 @@ nav {
     width: 48%;
     display: flex;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: black;
     margin: 10px 0;
     padding: 10px;
     border-radius: 15px;
     justify-content: space-between;
     transition: transform 0.2s;
+    color: white;
+    border: 1px solid #1DB954; /* Add subtle border */
 }
 
 .songItem:hover {
@@ -206,13 +211,48 @@ nav {
     margin-right: 15px;
 }
 
-.songName {
-    font-size: 1.1rem;
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    border: 1px solid #00A1FF; /* Blue border for songs */
+}
+
+.song-item:hover {
+    transform: scale(1.05);
+}
+
+.song-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.song-name {
+    flex-grow: 1;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-.timestamp {
+.song-duration {
     font-size: 1rem;
+    margin-left: 20px;
 }
 
 .timestamp i {
@@ -294,5 +334,37 @@ nav {
 
     .album {
         width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover h1 {
+        font-size: 2rem;
+    }
+
+    .cover p {
+        font-size: 0.9rem;
+    }
+
+    .album {
+        width: 100%;
+    }
+
+    .songItem, .song-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .song-name, .song-duration {
+        font-size: 1rem;
+    }
+
+    .song-item img, .songItem img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #myProgressBar {
+        width: 100%;
     }
 }
