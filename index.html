@@ -2,92 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DHUN - Play Songs for Free</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DHUN - Music for Everyone</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
+    <section class="landing-page">
         <div class="logo">
-            <img src="logo.png" alt="Musico"> 
+            <img src="logo.png" alt="Dhun Logo">
             <span>DHUN</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    
-    <section class="cover">
-        <div class="cover-content">
-            <h1>Welcome to Dhun</h1>
-            <p>Your personal music player, available 24x7. Tune into your favorite tracks now!</p>
-            <button class="play-now">Play Now</button>
-        </div>
-        <img src="covers/BGROUND.jpg" alt="Background Image">
-    </section>
-
- 
-    <section class="featured-album">
-        <h2>Featured Album: The Best of Alan Walker</h2>
-        <div class="album-container">
-            <div class="album">
-                <div class="album-cover"></div>
-                <h3>Alan Walker - Faded</h3>
-                <p>Enjoy the top hits of Alan Walker. Curated just for you!</p>
-                <button class="listen-album">Listen Now</button>
-            </div>
-            <div class="album">
-                <div class="album-cover"></div>
-                <h3>Alan Walker - Spectre</h3>
-                <p>Experience the amazing sounds of Spectre.</p>
-                <button class="listen-album">Listen Now</button>
-            </div>
+        <h1>Music for Everyone</h1>
+        
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='signup.html'">Sign Up</button>
         </div>
     </section>
-
-    
-    <div class="container">
-        <h1>Best of Alan Walker</h1>
-        <div class="song-list">
-            <div class="song-item">
-                <img src="/covers/1.jpg" alt="Song Cover">
-                <span class="song-name">Let Me Love You</span>
-                <span class="song-duration">03:32</span>
-            </div>
-            <div class="song-item">
-                <img src="/covers/2.jpg" alt="Song Cover">
-                <span class="song-name">Faded</span>
-                <span class="song-duration">03:36</span>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="bottom-player">
-        <div class="song-info">
-            <img src="/playing.gif" alt="Playing" id="gif">
-            <span id="song-title">Alan Walker - Faded</span>
-        </div>
-        <input type="range" id="progress-bar" min="0" max="100" value="0">
-        <div class="controls">
-            <i class="fas fa-step-backward"></i>
-            <i class="far fa-play-circle" id="play-button"></i>
-            <i class="fas fa-step-forward"></i>
-        </div>
-    </div>
-
-    <script src="/script.js"></script>
-    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-

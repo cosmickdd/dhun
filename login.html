@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DHUN</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="background-overlay"> <!-- Wrapper for background and overlay -->
+        <section class="auth-page">
+            <h1>Login to DHUN</h1>
+            <form id="loginForm" onsubmit="event.preventDefault(); login();">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button onclick="window.location.href='home.html'">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

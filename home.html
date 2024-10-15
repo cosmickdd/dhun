@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHUN - Your Music World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Dhun Logo">
+            <span>DHUN</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Albums</a></li>
+            <li><a href="#">Artists</a></li>
+        </ul>
+    </nav>
+
+    <!-- Trending Songs Carousel -->
+    <section class="carousel-section">
+        <h2>Trending Songs</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="song1.jpg" alt="Song 1 Cover">
+                <h3>Song 1 - Artist Name</h3>
+                <button onclick="window.location.href='songPage.html'">Play Now</button>
+            </div>
+            <div class="carousel-slide">
+                <img src="song2.jpg" alt="Song 2 Cover">
+                <h3>Song 2 - Artist Name</h3>
+                <button onclick="window.location.href='songPage.html'">Play Now</button>
+            </div>
+            <!-- More slides... -->
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+        </div>
+    </section>
+
+    <!-- Trending Albums Carousel -->
+    <section class="carousel-section">
+        <h2>Trending Albums</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="album1.jpg" alt="Album 1 Cover">
+                <h3>Album 1 - Artist Name</h3>
+                <button onclick="window.location.href='albumPage.html'">View Album</button>
+            </div>
+            <div class="carousel-slide">
+                <img src="album2.jpg" alt="Album 2 Cover">
+                <h3>Album 2 - Artist Name</h3>
+                <button onclick="window.location.href='albumPage.html'">View Album</button>
+            </div>
+            <!-- More slides... -->
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+        </div>
+    </section>
+
+    <!-- Album Rating and Review Section -->
+    <section class="album-rating-section">
+        <h2>Rate Your Favorite Albums</h2>
+        <div class="album-rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+        </div>
+        <div class="album-review">
+            <textarea placeholder="Write a review..."></textarea>
+            <button>Submit Review</button>
+        </div>
+    </section>
+
+    <!-- Song Player with Sliding One-liner Reviews -->
+    <div class="bottom-player">
+        <div class="song-info">
+            <img src="playing.gif" alt="Now Playing" id="gif">
+            <span id="song-title">Song Title - Artist Name</span>
+        </div>
+        <div class="review-slider">
+            <p>"Amazing track!" - User1</p>
+            <p>"Love the beats!" - User2</p>
+            <!-- More sliding reviews... -->
+        </div>
+        <form class="add-review">
+            <input type="text" placeholder="Add your one-liner review" maxlength="100">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
